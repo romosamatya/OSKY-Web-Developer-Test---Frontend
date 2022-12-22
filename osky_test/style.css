@@ -1,0 +1,360 @@
+/* Typography
+--------------------------------------------- */
+body,
+button,
+input,
+select,
+optgroup,
+textarea {
+	color: #404040;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 1rem;
+	line-height: 1.5;
+	margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	clear: both;
+}
+
+
+--------------------------------------------- */
+body {
+	margin: 0;
+	background: #fff;
+}
+
+hr {
+	background-color: #ccc;
+	border: 0;
+	height: 1px;
+	margin-bottom: 1.5em;
+}
+
+ul,
+ol {
+	margin: 0;
+}
+
+ul {
+	list-style: disc;
+}
+
+ol {
+	list-style: decimal;
+}
+
+li > ul,
+li > ol {
+	margin-bottom: 0;
+	margin-left: 1.5em;
+}
+
+#content{
+	width: 100%;
+	height: 500px;
+	background-color: #00AEEF;
+}
+.masthead {
+  padding: 20px 0;
+}
+.menu-social-container {
+  display: flex;
+  justify-content: flex-end;
+}
+.header-top .container {
+  justify-content: end;
+}
+.dash-menu{
+	margin-left: 40px;
+}
+.dash-menu a {
+  color: #00aeef;
+  text-decoration: none;
+  padding: 0 15px;
+  font-weight: 500;
+}
+/* Links
+--------------------------------------------- */
+
+a:focus {
+	outline: thin dotted;
+}
+
+a:hover,
+a:active {
+	outline: 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo img{
+	max-width: 180px;
+}
+.social-menu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.social-menu li {
+  margin-left: 20px;
+}
+
+.social-menu a {
+  color: #00AEEF;
+}
+#membership-submenu button {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  border-radius: 100%;
+  background: #fff;
+  border: none;
+  font-size: 28px;
+  width: 50px;
+  height: 50px;
+  display: flex;
+justify-content: center;
+align-items: center;
+cursor: pointer;
+}
+/* Navigation
+--------------------------------------------- */
+nav {
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  font-weight: 500;
+  justify-content: flex-end;
+
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+nav li {
+  position: relative;
+  display: flex;
+}
+
+nav a {
+  color: #000;
+  text-decoration: none;
+}
+
+.main-navigation ul li a::after {
+  content: "";
+  width: 100%;
+  height: 3px;
+  background-color: #00AEEF;
+  display: block;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  	display: none;
+	visibility: hidden;
+}
+.main-navigation li:hover ::after{
+  	display: block;
+	visibility: visible;
+}
+.main-navigation #membership-submenu li a::after {
+	display: none;
+}
+#membership-submenu li::before{
+		content: "";
+	  width: 1px;
+	  height: 50px;
+	  background-color: #404040;
+	  display: block;
+	  position: absolute;
+	  top: 50%;
+	  left: 0;
+	  transform: translateY(-50%);
+
+}
+#membership-submenu li:nth-child(2):before{
+	display: none;
+}
+
+.main-navigation ul ul {
+	box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+	float: left;
+	position: absolute;
+	top: 100%;
+	z-index: 99999;
+	right: -75px;
+	font-size: 14px;
+	margin-top: 4px;
+	background-color: #fff;
+	display: none;
+	visibility: hidden;
+}
+
+.main-navigation ul .visible {
+	display: flex;
+	visibility: visible;
+}
+.main-navigation ul ul a{
+display: block;
+align-self: center;
+margin: 0 35px;
+width: 89px;
+padding: 50px 0;
+text-align: center;
+}
+
+.main-navigation li {
+	position: relative;
+}
+
+.main-navigation a {
+display: inline-block;
+text-decoration: none;
+padding: 0 20px;
+margin: 12px 0;
+}
+
+.main-navigation ul ul Li:hover a{
+	color: #21759b ;
+}
+
+/* Accessibility
+--------------------------------------------- */
+
+/* Text meant only for screen readers. */
+.screen-reader-text {
+	border: 0;
+	clip: rect(1px, 1px, 1px, 1px);
+	clip-path: inset(50%);
+	height: 1px;
+	margin: -1px;
+	overflow: hidden;
+	padding: 0;
+	position: absolute !important;
+	width: 1px;
+	word-wrap: normal !important;
+}
+
+.screen-reader-text:focus {
+	background-color: #f1f1f1;
+	border-radius: 3px;
+	box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+	clip: auto !important;
+	clip-path: none;
+	color: #21759b;
+	display: block;
+	font-size: 0.875rem;
+	font-weight: 700;
+	height: auto;
+	left: 5px;
+	line-height: normal;
+	padding: 15px 23px 14px;
+	text-decoration: none;
+	top: 5px;
+	width: auto;
+	z-index: 100000;
+}
+
+
+
+#menu-button {
+  display: none;
+  cursor: pointer;
+  color: #333;
+  font-size: 18px;
+  transition: all 0.3s;
+}
+@media (max-width: 1080px) {
+	nav {
+  font-size: 13px;
+}
+.logo img {
+  max-width: 120px;
+  display: block;
+}
+}
+
+@media (max-width: 768px) {
+	nav{
+		justify-content: flex-end;
+	}
+  nav ul {
+    display: none;
+  }
+    nav ul.visible {
+    display: block;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #fff;
+    width: 100%;
+  }
+   nav ul li:hover{
+   	background-color: #21759b;
+   }
+.main-navigation ul li a {
+  margin: 0;
+  padding: 11px 15px;
+  width: 100%;
+}
+  nav ul li:hover > a{
+  	color: #fff;
+  }
+  .masthead{
+  	position: relative;
+  }
+  #menu-button {
+    display: block;
+    float: right;
+  }
+  nav li{
+  	display: block;
+  }
+  .main-navigation ul ul a {
+  margin-left: 20px;
+ padding: 11px 15px;
+  width: 100%;
+  text-align: left;
+}
+
+  .main-navigation ul ul {
+  	position: relative;
+  	top: 0;
+  	left: 0;
+  	margin: 0;
+	}
+	.main-navigation ul .visible{
+		display: block;
+	}
+#membership-submenu button {
+  top: -48px;
+  left: 100%;
+  transform: translateX(-100%);
+  background:none;
+}
+  nav ul li:hover ul button,  .main-navigation ul ul Li:hover a{
+  	color: #fff;
+  }
+  .header-top .container {
+  justify-content: space-around;
+}
+
+}
